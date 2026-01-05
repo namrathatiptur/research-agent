@@ -1,0 +1,42 @@
+[project]
+name = "research-agent"
+version = "0.1.0"
+description = "Agentic research assistant with MCP integration"
+requires-python = ">=3.11"
+dependencies = [
+    "langgraph>=0.2.0",
+    "langchain-anthropic>=0.2.0",
+    "langchain-community>=0.3.0",
+    "langchain-core>=0.3.0",
+    "anthropic>=0.39.0",
+    "mcp>=1.0.0",
+    "chromadb>=0.5.0",
+    "tavily-python>=0.5.0",
+    "fastapi>=0.115.0",
+    "uvicorn>=0.32.0",
+    "streamlit>=1.40.0",
+    "python-dotenv>=1.0.0",
+    "pydantic>=2.9.0",
+    "pydantic-settings>=2.5.0",
+    "httpx>=0.27.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.24.0",
+    "ruff>=0.7.0",
+    "black>=24.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W"]
+
